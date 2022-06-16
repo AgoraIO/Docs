@@ -1,6 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-const theme = require('shiki/themes/github-dark-dimmed.json');
+const theme = require('shiki/themes/material-palenight.json');
 const { remarkCodeHike } = require('@code-hike/mdx');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
