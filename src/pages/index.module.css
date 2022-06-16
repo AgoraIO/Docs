@@ -21,3 +21,9 @@
   align-items: center;
   justify-content: center;
 }
+
+navbar__logo img {
+  height: 90%;
+  top: 7.5px;
+  position: relative;
+}
