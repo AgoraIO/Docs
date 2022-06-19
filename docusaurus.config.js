@@ -1,5 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 const theme = require('shiki/themes/material-palenight.json');
 const { remarkCodeHike } = require('@code-hike/mdx');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -15,15 +14,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'agora', // Usually your GitHub org/user name.
-  projectName: 'ng-docs', // Usually your repo name.
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  organizationName: 'agora',
+  projectName: 'ng-docs',
   i18n: {
     defaultLocale: 'en',
     locales: ['en']
@@ -39,16 +31,14 @@ const config = {
         docs: {
           beforeDefaultRemarkPlugins: [[remarkCodeHike, { theme }]],
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          routeBasePath: '/',
+          path: './docs/pages',
+          // exclude: ['content'],
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          routeBasePath: '/samples',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
@@ -63,10 +53,10 @@ const config = {
   ],
 
   themes: ['mdx-v2'],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      autoCollapseSidebar: true,
       navbar: {
         title: 'Developer Center',
         logo: {
@@ -75,8 +65,7 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/',
             position: 'left',
             label: 'Docs'
           },

@@ -1401,7 +1401,7 @@
     react-json-view "^1.21.3"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-google-analytics@2.0.0-beta.21":
+"@docusaurus/plugin-google-analytics@2.0.0-beta.21", "@docusaurus/plugin-google-analytics@^2.0.0-beta.21":
   version "2.0.0-beta.21"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-google-analytics/-/plugin-google-analytics-2.0.0-beta.21.tgz#5475c58fb23603badf41d84298569f6c46b4e6b2"
   integrity sha512-+5MS0PeGaJRgPuNZlbd/WMdQSpOACaxEz7A81HAxm6kE+tIASTW3l8jgj1eWFy/PGPzaLnQrEjxI1McAfnYmQw==
@@ -1410,7 +1410,7 @@
     "@docusaurus/utils-validation" "2.0.0-beta.21"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-google-gtag@2.0.0-beta.21":
+"@docusaurus/plugin-google-gtag@2.0.0-beta.21", "@docusaurus/plugin-google-gtag@^2.0.0-beta.21":
   version "2.0.0-beta.21"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-google-gtag/-/plugin-google-gtag-2.0.0-beta.21.tgz#a4a101089994a7103c1cc7cddb15170427b185d6"
   integrity sha512-4zxKZOnf0rfh6myXLG7a6YZfQcxYDMBsWqANEjCX77H5gPdK+GHZuDrxK6sjFvRBv4liYCrNjo7HJ4DpPoT0zA==
@@ -1419,7 +1419,7 @@
     "@docusaurus/utils-validation" "2.0.0-beta.21"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-sitemap@2.0.0-beta.21":
+"@docusaurus/plugin-sitemap@2.0.0-beta.21", "@docusaurus/plugin-sitemap@^2.0.0-beta.21":
   version "2.0.0-beta.21"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-sitemap/-/plugin-sitemap-2.0.0-beta.21.tgz#8bfa695eada2ec95c9376a884641237ffca5dd3d"
   integrity sha512-/ynWbcXZXcYZ6sT2X6vAJbnfqcPxwdGEybd0rcRZi4gBHq6adMofYI25AqELmnbBDxt0If+vlAeUHFRG5ueP7Q==
