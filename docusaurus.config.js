@@ -33,11 +33,11 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           path: './docs/pages',
-          // exclude: ['content'],
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
         blog: {
+          routeBasePath: '/samples',
           showReadingTime: true,
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
@@ -56,7 +56,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      autoCollapseSidebar: true,
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true
+        }
+      },
       navbar: {
         title: 'Developer Center',
         logo: {
@@ -85,7 +90,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/intro'
+                to: '/examples'
               }
             ]
           },
