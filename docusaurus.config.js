@@ -1,4 +1,5 @@
 // @ts-check
+const path = require('path');
 const theme = require('shiki/themes/material-palenight.json');
 const { remarkCodeHike } = require('@code-hike/mdx');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -21,7 +22,15 @@ const config = {
     locales: ['en']
   },
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', [
+    'docusaurus-plugin-module-alias',
+    {
+      alias: {
+        '@docs': path.resolve(__dirname, 'docs'),
+        '@app': path.resolve(__dirname, 'src'),
+      },
+    },
+  ],],
 
   presets: [
     [

@@ -1,8 +1,6 @@
 import React from 'react';
-import { AppProvider } from '../contexts/AppContext';
-
+import { AppProvider } from '@app/contexts/AppContext';
 
 export default function Root({ children }) {
-  console.log('😀')
   return <AppProvider>{children}</AppProvider>;
 }
