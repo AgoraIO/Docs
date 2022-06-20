@@ -32,7 +32,7 @@ const config = {
           beforeDefaultRemarkPlugins: [[remarkCodeHike, { theme }]],
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          path: './docs/pages',
+          exclude: ['assets/**', 'shared/**'],
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },

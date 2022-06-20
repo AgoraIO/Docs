@@ -1,0 +1,34 @@
+import PlatformSelector, { PlatfromContent } from '@site/src/components/PlatformSelector';
+
+# Get started with {props.product} using UIKit
+
+Real-time {props.product} immerses people in the sights and sounds of human connections, keeping them engaged in your {props.client} longer.
+
+{props.product === 'Video Calling' ? `${props.product} enables one-to-one or small-group video chat connections with smooth, jitter-free streaming video. ${props.company}’s ${props.sdk} makes it easy to embed real-time video chat into web, mobile and native ${props.client}s.` : `${props.product} enables you to host large-scale live audio and video streaming events with real-time interactivity. ${props.company}’s ${props.sdk} makes it easy to embed real-time video chat into web, mobile and native ${props.client}s.`
+}
+
+## Understand the tech
+
+The following figure shows the workflow you integrate into your app in order to achieve {props.product} functionality using UIKit.
+
+<img src="/assets/images/demo.svg" />
+
+To using UIKit, you implement the following steps in your app:
+
+- Create an instance of the viewer
+  Declare and initialize an instance of the UIKit viewer.
+- Join a channel
+  - When you execute the join command, your app joins the channel, publishes the local audio and video streams to Agora and handles audio and video for anyone else who joins the call in a default UI.
+  - Yes, you read that right. After initializing a viewer instance, you can create or join a channel with just one line of code.
+
+## Prerequisites
+
+To follow this procedure you must have:
+
+<PlatformSelector platform={props.platform}>
+  <PlatfromContent>Hello</PlatfromContent>
+</PlatformSelector>
+
+## Project setup
+
+In order to create the environment necessary to integrate {props.product} into your {props.client} using {props.sdk}, do the following:
