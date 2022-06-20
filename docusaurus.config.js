@@ -29,7 +29,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          beforeDefaultRemarkPlugins: [[remarkCodeHike, { theme }]],
+          beforeDefaultRemarkPlugins: [[remarkCodeHike, { theme, showCopyButton: true, }]],
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           exclude: ['assets/**', 'shared/**'],

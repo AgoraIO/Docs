@@ -1,6 +1,17 @@
-import PlatformSelector, { PlatfromContent } from '@site/src/components/PlatformSelector';
 
 # Get started with {props.product} using UIKit
+
+<PlatformContent platform="android">
+  Platform: android
+</PlatformContent>  
+
+<PlatformContent platform="ios">
+  Platform: iOS
+</PlatformContent>  
+
+<PlatformContent platform="web">
+  Platform: web
+</PlatformContent>  
 
 Real-time {props.product} immerses people in the sights and sounds of human connections, keeping them engaged in your {props.client} longer.
 
@@ -24,10 +35,6 @@ To using UIKit, you implement the following steps in your app:
 ## Prerequisites
 
 To follow this procedure you must have:
-
-<PlatformSelector platform={props.platform}>
-  <PlatfromContent>Hello</PlatfromContent>
-</PlatformSelector>
 
 ## Project setup
 
