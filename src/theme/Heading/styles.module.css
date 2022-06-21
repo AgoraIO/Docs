@@ -1,0 +1,39 @@
+/*
+When the navbar is sticky, ensure that on anchor click,
+the browser does not scroll that anchor behind the navbar
+See https://twitter.com/JoshWComeau/status/1332015868725891076
+ */
+.anchorWithStickyNavbar {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 0.5rem);
+}
+
+.anchorWithHideOnScrollNavbar {
+  scroll-margin-top: 0.5rem;
+}
+
+:global(.hash-link) {
+  text-decoration: none;
+  color: var(--ifm-color-dark);
+}
+
+:global(.hash-link:hover) {
+  text-decoration: none;
+  color: var(--ifm-color-dark);
+}
+
+:global(.hash-link > span) {
+  padding-left: 0.5rem;
+  transition: opacity var(--ifm-transition-fast);
+  user-select: none;
+}
+
+:global(.hash-link span::after) {
+  opacity: 0;
+  content: '#';
+  text-decoration: underline;
+  color: var(--ifm-color-primary);
+}
+
+:global(.hash-link:hover span::after) {
+  opacity: 1;
+}

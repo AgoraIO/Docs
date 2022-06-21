@@ -7,7 +7,7 @@ export default function DocBreadcrumbsWrapper(props) {
   return (
     <>
       <PlatformSelecter />
-      <DocBreadcrumbs {...props} />
+      {/* <DocBreadcrumbs {...props} /> */}
     </>
   );
 }

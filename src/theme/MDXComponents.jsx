@@ -3,5 +3,5 @@ import { PlatformWrapper } from '@app/components/PlatformWrapper';
 
 export default {
   ...MDXComponents,
-  PlatformWrapper,
+  PlatformWrapper
 };

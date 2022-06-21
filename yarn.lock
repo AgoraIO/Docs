@@ -3521,6 +3521,11 @@ docusaurus-plugin-sass@^0.2.2:
   dependencies:
     sass-loader "^10.1.1"
 
+docusaurus-theme-frontmatter@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-theme-frontmatter/-/docusaurus-theme-frontmatter-1.1.0.tgz#fc6f2ffb6f1e38cad05aadc2dcdcef0cca381ea8"
+  integrity sha512-zpH60RZbeG5BREyo+V0hei90734sPYvytjDvZVyGOJpYwYisuSYMhZVd5x/CYbUMC4+dJAJ8s7trVaNGFLaqrg==
+
 docusaurus-theme-mdx-v2@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/docusaurus-theme-mdx-v2/-/docusaurus-theme-mdx-v2-0.1.1.tgz#e058b2b8410cc10b976a7ec72a36101ed359fe51"

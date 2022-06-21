@@ -1,12 +1,30 @@
-platformSelecter{
+.platformSelecter {
   display: flex;
-  gap: 1rem;  
+  gap: 5px;
 
-  & .platformSelecterButton{
+  & .platformSelecterButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #eaeaea;
+    transition: all 0.2s ease-in-out;
 
+    &:hover {
+      border-color: var(--ifm-color-primary);
+      color: var(--ifm-color-primary);
+    }
 
-    &.active{
+    &.active {
+      background-color: var(--ifm-color-primary);
+      color: var(--color-white);
+      border-color: var(--ifm-color-primary);
 
+      &:hover {
+        color: var(--color-white);
+      }
     }
   }
 }

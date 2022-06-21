@@ -22,15 +22,18 @@ const config = {
     locales: ['en']
   },
 
-  plugins: ['docusaurus-plugin-sass', [
-    'docusaurus-plugin-module-alias',
-    {
-      alias: {
-        '@docs': path.resolve(__dirname, 'docs'),
-        '@app': path.resolve(__dirname, 'src'),
-      },
-    },
-  ],],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      'docusaurus-plugin-module-alias',
+      {
+        alias: {
+          '@docs': path.resolve(__dirname, 'docs'),
+          '@app': path.resolve(__dirname, 'src')
+        }
+      }
+    ]
+  ],
 
   presets: [
     [
@@ -38,7 +41,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          beforeDefaultRemarkPlugins: [[remarkCodeHike, { theme, showCopyButton: true, }]],
+          beforeDefaultRemarkPlugins: [
+            [remarkCodeHike, { theme, showCopyButton: true, lineNumbers: true }]
+          ],
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           exclude: ['assets/**', 'shared/**'],
@@ -61,7 +66,7 @@ const config = {
     ]
   ],
 
-  themes: ['mdx-v2'],
+  themes: ['mdx-v2', 'docusaurus-theme-frontmatter'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
