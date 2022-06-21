@@ -12,6 +12,7 @@ const config = {
     'Agora NG Sdk  is built for Live, interactive voice and video powered by the only global network dedicated to real-time engagement at ease.',
   url: 'https://agora-ngdocs.vercel.app/',
   baseUrl: '/',
+  staticDirectories: ['public', 'static', 'docs/assets'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
