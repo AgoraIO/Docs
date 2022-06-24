@@ -1,8 +1,10 @@
 @import url('https://use.typekit.net/sru1hww.css');
 
 @import './modules/variables';
+@import './modules/mixins';
 @import './modules/base';
 @import './modules/global';
 @import './modules/overrides';
+@import './modules/grid';
 
-@import './components/navbar';
+@import './components/header';

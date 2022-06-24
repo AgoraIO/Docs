@@ -1,0 +1,41 @@
+@mixin media-queries($breakpoints) {
+  @if $breakpoints==atSmall {
+    @media only screen and (min-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoints==atMedium {
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoints==atMediumLarge {
+    @media only screen and (min-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoints==atLarge {
+    @media only screen and (min-width: 1180px) {
+      @content;
+    }
+  } @else if $breakpoints==atLarger {
+    @media only screen and (min-width: 1920px) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin nav-link {
+  display: inline-block;
+  font-weight: var(--font-regular);
+  color: var(--color-gray);
+  transition: color 0.2s ease-in-out;
+  padding: 15px var(--pd-base);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-main-light);
+    text-decoration: none;
+  }
+}

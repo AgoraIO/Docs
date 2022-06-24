@@ -5,3 +5,12 @@
 .ch-codeblock:hover .ch-code-button {
   display: block;
 }
+
+nav.navbar {
+  display: none;
+}
+
+.hero {
+  background: #edf5fa;
+  color: var(--color-dark);
+}
