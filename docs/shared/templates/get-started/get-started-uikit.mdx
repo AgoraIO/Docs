@@ -1,21 +1,27 @@
 import Prerequites from '@docs/shared/partials/prerequities.mdx';
-
 import ProjectSetup from '@docs/shared/partials/get-started-uikit/project-setup/index.mdx';
-
 import ProjectImplement from '@docs/shared/partials/get-started-uikit/project-implementation/index.mdx';
+import ProjectTest from '@docs/shared/partials/get-started-uikit/project-test/index.mdx';
+import Reference from '@docs/shared/partials/get-started-uikit/reference/index.mdx';
 
 Real-time {props.product} immerses people in the sights and sounds of human connections, keeping them engaged in your {props.client} longer.
 
-{props.product === 'Video Calling' ? `${props.product} enables one-to-one or small-group video chat connections with smooth, jitter-free streaming video. ${props.company}’s ${props.sdk} makes it easy to embed real-time video chat into web, mobile and native ${props.client}s.` : `${props.product} enables you to host large-scale live audio and video streaming events with real-time interactivity. ${props.company}’s ${props.sdk} makes it easy to embed real-time video chat into web, mobile and native ${props.client}s.`
-}
+{props.product === 'Video Calling' ?
+`${props.product} enables one-to-one or small-group video chat connections with smooth, jitter-free streaming video. ${props.company}’s ${props.sdk} makes it easy to embed real-time video chat into web, mobile and native ${props.client}s.` :
+`${props.product} enables you to host large-scale live audio and video streaming events with real-time interactivity. ${props.company}’s ${props.sdk} makes it easy to embed real-time video chat into web, mobile and native ${props.client}s.`
+} Thanks to {props.company}’s intelligent and global Software Defined Real-time Network (SD-RTN™), you can rely on the highest available video and audio quality.
+
+UIKit is a library that combines {props.company} real-time engagement functionality into a customizable user interface. Have another coffee, we have done all the work for you.
+
+<img src="/images/video-calling/video-call-web.png" />
+
+This page shows the minimum code you need to integrate high-quality, low-latency {props.product} features into your {props.client} using UIKit.
 
 ## Understand the tech
 
 The following figure shows the workflow you integrate into your app in order to achieve {props.product} functionality using UIKit.
 
-{/* <img src={require('../../../assets/images/demo.svg')} /> */}
-
-![Image](/images/demo.svg)
+![Image](/images/video-calling/video-call.svg)
 
 To using UIKit, you implement the following steps in your app:
 
@@ -39,4 +45,26 @@ In order to create the environment necessary to integrate {props.product} into y
 
 ## Implement a client for the documentation template
 
+When the user taps a button, the {props.client} joins or leaves a channel. When another user joins the same channel, their video and audio is rendered in the {props.client}. This simple workflow enables you to concentrate on implementing {props.company} features and not UX bells and whistles.
+
+To integrate real-time video with a ready-made user interface into your {props.client} using UIKit:
+
 <ProjectImplement />
+
+## Test your implementation
+
+To ensure that you have implemented {props.product} in your {props.client}:
+
+1. [Generate a temporary token](https://docs.agora.io/en/Agora%20Platform/get_appid_token?platform=All#generate-a-temporary-token) in Agora Console.
+
+2. In your browser, navigate to the [{props.company} web demo](https://webdemo.agora.io/agora-web-showcase/examples/Agora-Web-Tutorial-1to1-Web/) and update _App ID_, _Channel_, and _Token_ with the values for your temporary token, then click _Join_.
+
+<ProjectTest />
+
+## Reference
+
+This section contains information that completes the information in this page, or points you to documentation that explains other aspects to this product.
+
+<Reference />
+
+> Next steps: To ensure communication security in a test or production environment, use a token server to generate token is recommended to ensure communication security, see [Authenticate Your Users with Tokens](/video-calling/authenticate-your-users-with-accesstokens.adoc)
