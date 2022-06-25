@@ -1,5 +1,5 @@
 import React from 'react';
-import { platforms } from '@app/constants/platforms';
+import { platforms } from '@site/data/platforms';
 import { useLocalStorage } from '@app/hooks/useLocalStorage';
 
 export const AppContext = React.createContext({});

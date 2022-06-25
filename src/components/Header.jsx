@@ -6,28 +6,28 @@ export const Header = () => {
   const handleClick = () => setIsResponsive(!isResponsive);
 
   return (
-    <header class="header">
-      <div class="layout layout--full">
-        <div class="layout__grid">
-          <div class="layout__grid--fixed">
-            <div class="header__brand">
+    <header className="header">
+      <div className="layout layout--full">
+        <div className="layout__grid">
+          <div className="layout__grid--fixed">
+            <div className="header__brand">
               <a href="/">
                 <LogoImg />
                 <h1>Agora Developer Center</h1>
               </a>
             </div>
           </div>
-          <div class="layout__grid--fluid">
-            <div class="header__navigation">
-              <ul class="header__navigation-menu header__navigation-menu--left">
+          <div className="layout__grid--fluid">
+            <div className="header__navigation">
+              <ul className="header__navigation-menu header__navigation-menu--left">
                 {menu.slice(0, 4).map(({ id, label, link }) => (
-                  <li key={id} class={label === 'Docs' ? 'active' : ''}>
+                  <li key={id} className={label === 'Docs' ? 'active' : ''}>
                     <a href={link}>{label}</a>
                   </li>
                 ))}
               </ul>
 
-              <ul class="header__navigation-menu header__navigation-menu--right">
+              <ul className="header__navigation-menu header__navigation-menu--right">
                 {menu.slice(4, 6).map(({ id, label, link }) => (
                   <li key={id}>
                     <a href={link}>{label}</a>
@@ -36,14 +36,14 @@ export const Header = () => {
               </ul>
             </div>
           </div>
-          <div class="header__responsive">
-            <div class="header__responsive-button" onClick={handleClick}>
-              <span class="header__responsive-button__icon"></span>
+          <div className="header__responsive">
+            <div className="header__responsive-button" onClick={handleClick}>
+              <span className="header__responsive-button__icon"></span>
             </div>
 
-            <ul class={`header__responsive-menu ${isResponsive ? 'active' : ''}`}>
+            <ul className={`header__responsive-menu ${isResponsive ? 'active' : ''}`}>
               {menu.slice(0, 4).map(({ id, label, link }) => (
-                <li key={id} class={label === 'Docs' ? 'active' : ''}>
+                <li key={id} className={label === 'Docs' ? 'active' : ''}>
                   <a href={link}>{label}</a>
                 </li>
               ))}

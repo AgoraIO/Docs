@@ -42,6 +42,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          breadcrumbs: false,
           beforeDefaultRemarkPlugins: [
             [remarkCodeHike, { theme, showCopyButton: true, lineNumbers: true }]
           ],

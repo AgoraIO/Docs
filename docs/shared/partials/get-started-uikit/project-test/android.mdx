@@ -7,7 +7,7 @@
 
 - In `Gradle Scripts/settings.gradle (Project Settings)`, add the `jitpack` repository by adding the following line to the `repositories` section inside `dependencyResolutionManagement`:
 
-```gradle
+```java
   repositories {
   ...
   maven { setUrl("https://jitpack.io") }
@@ -16,7 +16,7 @@
 
 - In `Gradle Scripts/build.gradle (Module: <projectname>)`, add the UIK dependency. The `dependencies` section should look like the following:
 
-```gradle
+```java
   dependencies {
   ...
   implementation 'ANDROID-UIKIT-SDK:<version>'

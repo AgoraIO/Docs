@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import { platforms } from '@app/constants/platforms';
+import { platforms } from '@site/data/platforms';
 import { AppContext } from '@app/contexts/AppContext';
 
 import styles from '@app/components/PlatformSelecter.module.scss';
@@ -12,7 +12,7 @@ export const PlatformSelecter = () => {
 
   const { template } = useFrontMatter();
 
-  if (template !== 'platform') return null;
+  // if (template !== 'platform') return null;
 
   return (
     <div className={styles.platformSelecter}>
