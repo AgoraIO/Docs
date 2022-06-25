@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory, useLocation } from '@docusaurus/router';
+import { ChevronDown } from 'react-feather';
 
 import { products } from '@site/data/products';
 
@@ -22,17 +23,27 @@ export const ProductSelecter = () => {
   };
 
   return (
-    <div className="dropdown dropdown--hoverable">
-      <button className="">{selected.label}</button>
-      <ul className="dropdown__menu">
-        {productList.map(({ id, label, icon, link }) => (
-          <li key={id}>
-            <button onClick={() => handleSelect(id, link)} className="dropdown__link">
-              {label}
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="product-selecter">
+      <div className="dropdown dropdown--hoverable">
+        <button className="dropdown__box">
+          <span>
+            {selected.icon} {selected.label}
+          </span>
+          <ChevronDown />
+        </button>
+        <ul className="dropdown__menu">
+          {productList.map(({ id, label, icon, link }) => (
+            <li key={id}>
+              <button
+                onClick={() => handleSelect(id, link)}
+                className={`dropdown__link ${selected.id === id ? 'active' : ''}`}
+              >
+                {icon} {label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

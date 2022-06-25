@@ -1,9 +1,10 @@
 .platformSelecter {
   display: flex;
   gap: 5px;
+  margin-top: 4px;
 
   & .platformSelecterButton {
-    padding: 6px 12px;
+    padding: 11px 12px;
     font-size: 14px;
     font-weight: 500;
     border: none;

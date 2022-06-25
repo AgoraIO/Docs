@@ -14,3 +14,32 @@ nav.navbar {
   background: #edf5fa;
   color: var(--color-dark);
 }
+
+.menu__list-item--collapsed .menu__link--sublist:after,
+.menu__list-item--collapsed .menu__caret:before {
+  transform: scale(0.7) rotateZ(90deg);
+}
+.menu__link--sublist-caret:after {
+  transform: scale(0.7) rotate(180deg);
+  opacity: 0.5;
+}
+
+aside.theme-doc-sidebar-container {
+  border-right: none;
+
+  & > div {
+    height: 100vh;
+  }
+}
+
+ul.table-of-contents {
+  width: 280px;
+  li,
+  &__link {
+    width: 100%;
+    margin: 0;
+  }
+  &__left-border {
+    border-left: none;
+  }
+}
