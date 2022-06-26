@@ -19,6 +19,7 @@ nav.navbar {
 .menu__list-item--collapsed .menu__caret:before {
   transform: scale(0.7) rotateZ(90deg);
 }
+
 .menu__link--sublist-caret:after {
   transform: scale(0.7) rotate(180deg);
   opacity: 0.5;
@@ -32,9 +33,10 @@ aside.theme-doc-sidebar-container {
   }
 }
 
-.theme-doc-toc-desktop {
+div.theme-doc-toc-desktop {
   max-width: 280px;
   width: 280px;
+  top: calc(var(--ifm-navbar-height) + 20px);
 }
 
 ul.table-of-contents {
@@ -97,8 +99,9 @@ p.table-of-contents__title {
   }
 }
 
-.container {
+div.container {
   padding: 0;
+  padding-top: 20px !important;
 
   .row {
     gap: 20px;
