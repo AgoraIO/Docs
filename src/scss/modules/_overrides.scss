@@ -32,14 +32,79 @@ aside.theme-doc-sidebar-container {
   }
 }
 
-ul.table-of-contents {
+.theme-doc-toc-desktop {
+  max-width: 280px;
   width: 280px;
+}
+
+ul.table-of-contents {
+  padding: 0;
+  width: 100%;
+
   li,
   &__link {
+    font-size: 14px;
     width: 100%;
     margin: 0;
+    margin-bottom: 10px;
   }
+
+  &__link--active {
+    font-weight: 600;
+  }
+
+  ul {
+    margin-top: 10px;
+  }
+
   &__left-border {
     border-left: none;
   }
+}
+
+.product-selecter {
+  & + nav {
+    padding: 0;
+    scrollbar-gutter: unset;
+
+    .menu__list-item-collapsible {
+      .menu__link {
+        padding-right: 10px;
+        &--active {
+          background-color: transparent;
+          font-weight: 400;
+          color: initial;
+        }
+      }
+    }
+
+    .menu__link {
+      font-weight: 400;
+      padding: 0;
+      padding: 10px;
+      padding-right: 0;
+      margin-left: 10px;
+
+      &--active {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 0;
+
+  .row {
+    gap: 20px;
+    margin: 0;
+  }
+
+  .col {
+    padding: 0;
+  }
+}
+
+.main-wrapper main {
+  padding-left: 20px;
 }
