@@ -69,6 +69,16 @@ p.table-of-contents__title {
   margin-bottom: 10px;
 }
 
+.table-of-contents__link {
+  span {
+    display: inline-block;
+    background-color: #eee;
+    padding: 1px 6px;
+    border-radius: 2px;
+    line-height: 1;
+  }
+}
+
 .product-selecter {
   & + nav {
     padding: 0;

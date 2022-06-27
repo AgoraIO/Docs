@@ -11,7 +11,7 @@ export default function TOC({ className, ...props }) {
   return (
     <div className={clsx(styles.tableOfContents, 'thin-scrollbar', className)}>
       <SearchBarWrapper />
-      <p class="table-of-contents__title">Page Content</p>
+      <p className="table-of-contents__title">Page Content</p>
       <TOCItems
         {...props}
         linkClassName={LINK_CLASS_NAME}
