@@ -1,5 +1,5 @@
 import React from 'react';
-import { Video, Mic, MessageSquare } from 'react-feather';
+import { Video, Mic, Radio } from 'react-feather';
 
 export const products = {
   core: [
@@ -16,10 +16,10 @@ export const products = {
       link: '/voice-calling/understand/product-overview'
     },
     {
-      id: 'realtime-messaging',
-      label: 'Realtime Messaging',
-      icon: <MessageSquare />,
-      link: '/realtime-messaging/understand/product-overview'
+      id: 'interactive-live-streaming',
+      label: 'Interactive Live Streaming',
+      icon: <Radio />,
+      link: '/interactive-live-streaming/understand/product-overview'
     }
   ]
 };
