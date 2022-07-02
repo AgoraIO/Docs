@@ -6,7 +6,7 @@ import { useHistory, useLocation } from '@docusaurus/router';
 
 // TODO: Update Route Based Platform Selectors
 
-export const PlatformWrapper = ({ platform, children }) => {
+export const PlatformWrapper = ({ platform, children, ...props }) => {
   const { platform: selectedPlatform, handlePlatformChange } = React.useContext(AppContext);
 
   const { pathname, search } = useLocation();
@@ -23,6 +23,8 @@ export const PlatformWrapper = ({ platform, children }) => {
   }, [pathname, selectedPlatform]);
 
   return (
-    <div className={styles.platformWrapper}>{platform === selectedPlatform ? children : null}</div>
+    <div className={styles.platformWrapper} {...props}>
+      {platform === selectedPlatform ? children : null}
+    </div>
   );
 };

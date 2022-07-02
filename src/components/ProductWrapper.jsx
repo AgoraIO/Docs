@@ -11,8 +11,6 @@ export const ProductWrapper = ({ product, children }) => {
     setCurrentProduct(currentProduct);
   }, [pathname]);
 
-  console.log(currentProduct);
-
   if (currentProduct !== product) return null;
 
   return <>{children}</>;
