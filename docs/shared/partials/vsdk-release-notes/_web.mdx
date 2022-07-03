@@ -1,30 +1,26 @@
 import * as data from '@site/data/variables';
 
+{props.PRODUCT}
+
 ## Overview
 
 {data.VSDK} 4.x is a JavaScript and TypeScript library loaded by an HTML web page. The SDK library uses APIs in the web browser to establish connections and control the communication and interactive live streaming services.
 
 ### Compatibility
 
-See xref:{rootdir}/reference/supported-platforms.adoc[Supported platforms].
+See <Link to={`/${props.PATH}/reference/supported-platforms/`} replace>Supported platforms.</Link>
 
 ### Known issues
 
 _Chrome deprecates and removes the Plan B dialect_
 
-Chrome plans to deprecate and remove the Plan B dialect in WebRTC. For details, see the https://www.chromestatus.com/feature/5823036655665152[Chrome feature description]. This change affects the following Agora {VSDK} versions:
+Chrome plans to deprecate and remove the Plan B dialect in WebRTC. For details, see the [Chrome feature description](https://www.chromestatus.com/feature/5823036655665152). This change affects the following Agora {data.VSDK} versions:
 
-[cols="^,<"]
-|===
-|{VSDK} version |Impact
 
-a|
-v2.5.0-2.9.0
-
-v3.0.0-3.6.1
-|After a stream is published, the method call of `switchDevice` causes video freezes or no sound issues.
-|v4.0.0-4.0.1 |The `publish` and `subscribe` methods do not take effect.
-|===
+|{data.VSDK} version |Impact|
+|---|---|
+|v2.5.0-2.9.0 <br /> v3.0.0-3.6.1 | After a stream is published, the method call of `switchDevice` causes video freezes or no sound issues.|
+|v4.0.0-4.0.1 |The `publish` and `subscribe` methods do not take effect.|
 
 If you use any of the above SDK versions, Agora recommends that you upgrade the SDK to the latest version.
 
@@ -42,7 +38,7 @@ _Channel capacity improvement_
 
 As of v4.11.0, a single channel can support up to 128 concurrent online hosts, who can publish audio and video streams at the same time. The number of audience members in a channel is unlimited. Each host or audience member can subscribe to a maximum of 50 hosts at the same time.
 
-To experience this improvement, contact link:mailto:support@agora.io[support@agora.io].
+To experience this improvement, contact support@agora.io
 
 ### Fixed issues
 
@@ -69,16 +65,15 @@ v4.10.0 was released on March 11, 2022.
 
 _Adding support for media processing extensions_
 
-v4.10.0 supports using media processing extensions in the {VSDK}. The following extensions are currently free to use during the beta period. For guidance on how to integrate and use the extensions, refer to the documentation listed in the following table:
+v4.10.0 supports using media processing extensions in the {data.VSDK}. The following extensions are currently free to use during the beta period. For guidance on how to integrate and use the extensions, refer to the documentation listed in the following table:
 
 IAIN: sort out these links when https://gitlab.com/agora-documentation/documentation-source/-/issues/239 is done.
-[cols="<,<,<"]
-|===
-|Extension |Description |Documentation
 
-|Virtual Background Extension (Beta) |Enables users to replace their actual background with a solid color or custom image, or to blur their background. |link:./virtual_background_web_ng?platform=Web[Use the Virtual Background Extension]
-|AI Denoiser Extension (Beta) |Reduces many types of sudden noise and reduces vocal distortion when multiple people speak at the same time. |link:./noise_reduction_web_ng?platform=Web[Use the AI Denoiser Extension]
-|===
+
+|Extension | Description | Documentation|
+|---|---|---| 
+|Virtual Background Extension (Beta) |Enables users to replace their actual background with a solid color or custom image, or to blur their background. |[Use the Virtual Background Extension](/virtual_background_web_ng?platform=Web)|
+|AI Denoiser Extension (Beta) |Reduces many types of sudden noise and reduces vocal distortion when multiple people speak at the same time.|[Use the AI Denoiser Extension](/noise_reduction_web_ng?platform=Web)|
 
 ### API changes
 
@@ -149,16 +144,16 @@ v4.8.0 was released on December 29, 2021.
 
 ### New features
 
-_Checking the visibility of the &lt;video&gt; HTML tag_
+_Checking the visibility of the `<video>` HTML tag_
 
-After you call `play`, the SDK creates an `&lt;video&gt;` HTML tag for playing video tracks. v4.8.0 adds the following methods and events for checking the visibility of the `&lt;video&gt;` tag:
+After you call `play`, the SDK creates an `<video>` HTML tag for playing video tracks. v4.8.0 adds the following methods and events for checking the visibility of the `<video>` tag:
 
 - `localVideoTrack.on('video-element-visible-status')`
 - `remoteVideoTrack.on('video-element-visible-status')`
 - `localVideoTrack.getVideoElementVisibleStatus`
 - `remoteVideoTrack.getVideoElementVisibleStatus`
 
-When `localTrack.isPlaying` or `remoteTrack.isPlaying` is `true` but you cannot see any video, the above methods or events can help you check whether the `&lt;video&gt;` tag is visible or not and learn the reason when the `&lt;video&gt;` tag is invisible.
+When `localTrack.isPlaying` or `remoteTrack.isPlaying` is `true` but you cannot see any video, the above methods or events can help you check whether the `<video>` tag is visible or not and learn the reason when the `<video>` tag is invisible.
 
 ### Improvements
 
@@ -182,14 +177,14 @@ _Added_
 
 ## v4.7.3
 
-v4.7.3 was released on November 17, 2021. This release avoided the issue that on the Safari browser in iOS 15.1, after an audio or video call was interrupted, the {VSDK} failed to resume playing the remote media.
+v4.7.3 was released on November 17, 2021. This release avoided the issue that on the Safari browser in iOS 15.1, after an audio or video call was interrupted, the {data.VSDK} failed to resume playing the remote media.
 
 ## v4.7.2
 
 v4.7.2 was released on October 14, 2021, with the following changes:
 
-- Avoided the https://bugs.webkit.org/show_bug.cgi?id=230537[issue] that on the Safari browser in iOS 15, after an audio or video call was interrupted by a phone call, the {VSDK} might fail to resume sending the local media and playing the remote media.
-- Avoided the https://bugs.webkit.org/show_bug.cgi?id=230532[black screen issue] that might occur when using `videoTrack.play(element, {mirror: true})` to play the video on the desktop or mobile Safari 15 browser.
+- Avoided the [issue](https://bugs.webkit.org/show_bug.cgi?id=230537) that on the Safari browser in iOS 15, after an audio or video call was interrupted by a phone call, the {data.VSDK} might fail to resume sending the local media and playing the remote media.
+- Avoided the [black screen issue](https://bugs.webkit.org/show_bug.cgi?id=230532) that might occur when using `videoTrack.play(element, {mirror: true})` to play the video on the desktop or mobile Safari 15 browser.
 - Fixed the issue that calling `AgoraRTC.checkSystemRequirements()` on the Edge browser only returned `false`.
 
 ## v4.7.1
@@ -208,7 +203,7 @@ As of v4.7.0, if you enable media stream encryption, the SDK automatically disab
 
 This release makes the following improvements:
 
-- Optimizes the end-user experience of the {VSDK} on the mobile browser.
+- Optimizes the end-user experience of the {data.VSDK} on the mobile browser.
 - Improves the accuracy of the volume obtained by `getVolumeLevel`.
 - Adds the support of enabling dual-stream mode on Safari.
 
@@ -240,12 +235,12 @@ v4.6.0 was released on July 16, 2021.
 
 _Interactive Live Streaming Standard_
 
-As of v4.6.0, the {VSDK} supports Interactive Live Streaming Standard. The major difference between Agora Interactive Live Streaming Standard and Agora Live Interactive Streaming Premium is the latency level on the audience's client:
+As of v4.6.0, the {data.VSDK} supports Interactive Live Streaming Standard. The major difference between Agora Interactive Live Streaming Standard and Agora Live Interactive Streaming Premium is the latency level on the audience's client:
 
 - Interactive Live Streaming Premium: Ultra-low latency (400 ms to 800 ms) from the host's client to an audience member's client.
 - Interactive Live Streaming Standard: Low latency (1500 ms to 2000 ms) from the host's client to an audience member's client.
 
-The charges for Standard and Premium are different. For details, see the https://docs.agora.io/en/live-streaming/product_live_standard[product overview] and https://docs.agora.io/en/live-streaming/billing_live_standard?platform=Android[pricing] of Interactive Live Streaming Standard.
+The charges for Standard and Premium are different. For details, see the [product overview](https://docs.agora.io/en/live-streaming/product_live_standard) and [pricing](https://docs.agora.io/en/live-streaming/billing_live_standard?platform=Android) of Interactive Live Streaming Standard.
 
 You can set the latency level of the audience role in the following two ways:
 
@@ -259,7 +254,7 @@ v4.6.0 adds the `localTrack.setMuted` method to stop sending the media data of l
 - After the method call of `localVideoTrack.setEnabled(false)` to stop sending video, the SDK also immediately turns off the camera light and stops video capture, while `localVideoTrack.setMuted` does not stop video capture.
 - Calling `setEnabled(true)` takes longer to resume sending the media data than by than calling `setMuted(false)`.
 
-For more information, see https://docs.agora.io/en/live-streaming/faq/differences_between_setenabled_and_setmuted[What are the differences between setEnabled and setMuted?]
+For more information, see [What are the differences between setEnabled and setMuted?](https://docs.agora.io/en/live-streaming/faq/differences_between_setenabled_and_setmuted)
 
 ### Improvements
 
@@ -298,7 +293,7 @@ v4.5.0 was released on May 25, 2021.
 
 _AEC (Acoustic Echo Canceller) for the audio played on the local client_
 
-In a scenario where multiple users play a media file at the same time, such as watching a movie together, if the user A plays the media file through https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement[HTMLMediaElement] on Chrome with a speaker, the SDK captures the audio played by a speaker together with the voice of the user A. The other users can hear the audio sent by the user A and the audio played locally, which sounds like an echo. To deal with this echo issue, v4.5.0 adds the `processExternalMediaAEC` method. You can call `processExternalMediaAEC` and pass in the `HTMLMediaElement` to enable the AEC for the audio played on the local client.
+In a scenario where multiple users play a media file at the same time, such as watching a movie together, if the user A plays the media file through [HTMLMediaElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) on Chrome with a speaker, the SDK captures the audio played by a speaker together with the voice of the user A. The other users can hear the audio sent by the user A and the audio played locally, which sounds like an echo. To deal with this echo issue, v4.5.0 adds the `processExternalMediaAEC` method. You can call `processExternalMediaAEC` and pass in the `HTMLMediaElement` to enable the AEC for the audio played on the local client.
 
 ### Improvements
 
@@ -323,7 +318,7 @@ v4.5.0 adds the following preset video encoder configurations for screen sharing
 v4.5.0 fixes the following issues:
 
 - The `OptimizationMode` setting did not take effect.
-- On iOS, when the {VSDK} captures media, noises might occur on the local client.
+- On iOS, when the {data.VSDK} captures media, noises might occur on the local client.
 - On Firefox, after the stream transmitted by the SDK switched from high quality to low quality, the video resolution obtained by the `getRemoteVideoStats` method was still the resolution of the high-quality stream.
 - On Chrome, after you called `remoteAudioTrack.setVolume` to adjust the volume, if the playback was paused and then resumed, the volume changed back to the original one.
 - On Chrome, the `LocalAudioTrack.setVolume` method did not take effect.
@@ -349,14 +344,12 @@ _Firewall domain whitelist_
 
 As of v4.4.0, the destination domains required for your firewall whitelist changes to:
 
----
-
+```
 .agora.io
 .edge.agora.io
 .sd-rtn.com
 .edge.sd-rtn.com
-
----
+```
 
 If you upgrade the SDK to v4.4.0, update your firewall domain whitelist to ensure you can use Agora products in environments with restricted network access.
 
@@ -373,7 +366,7 @@ Once you enable the built-in encryption, all users in the same channel must use 
 
 _Cloud proxy_
 
-v4.4.0 adds the `client.on('is-using-cloud-proxy')` event. The SDK triggers this event after the local client successfully publishes a media stream to indicate whether the media stream is forwarded by the link:./cloud_proxy_web_ng?platform=Web[cloud proxy service].
+v4.4.0 adds the `client.on('is-using-cloud-proxy')` event. The SDK triggers this event after the local client successfully publishes a media stream to indicate whether the media stream is forwarded by the [cloud proxy service](/cloud_proxy_web_ng?platform=Web).
 
 _Error code_
 
@@ -402,9 +395,9 @@ v4.3.0 was released on January 26, 2021.
 
 _Cloud proxy_
 
-This release optimizes the Agora cloud proxy architecture and enhances the connectivity of the {VSDK} in environments with restricted network access. The optimized Agora cloud proxy service also supports regional connection.
+This release optimizes the Agora cloud proxy architecture and enhances the connectivity of the {data.VSDK} in environments with restricted network access. The optimized Agora cloud proxy service also supports regional connection.
 
-You can contact link:mailto:support@agora.io[support@agora.io] to apply for using the optimized Agora cloud proxy service and set the `mode` parameter as `3` when calling `startProxyServer`. For details, see link:./cloud_proxy_web_ng[Use Cloud Proxy].
+You can contact support@agora.io to apply for using the optimized Agora cloud proxy service and set the `mode` parameter as `3` when calling `startProxyServer`. For details, see link:./cloud_proxy_web_ng[Use Cloud Proxy].
 
 ## v4.2.1
 
@@ -558,11 +551,7 @@ v4.0.0 deletes the `LocalTrack.setMute` method and adds the `LocalTrack.setEnabl
 - As of v4.0.0, the SDK triggers the existing `Client.on('user-unpublished')` or `Client.on('user-published')` callbacks when the remote user calls `setEnabled` to enable or disable a track.
 - After you call `setMute(true)`, the SDK sends black video frames or silenced audio frames. If you mute a local video track, the camera light stays on, which might adversely impact the user experience. In contrast, if you disable a local video track by calling `setEnabled(false)`, the SDK immediately turns off the camera and stops capturing video.
 
----
-
-The `setEnabled` method changes media input behaviors, so it is an asynchronous operation and returns the result through the `Promise` object.
-
----
+> The `setEnabled` method changes media input behaviors, so it is an asynchronous operation and returns the result through the `Promise` object.
 
 ### New features
 
