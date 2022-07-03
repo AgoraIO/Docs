@@ -156,7 +156,7 @@ Key points:
 
   - Pay attention to the `mediaType` parameter of the `user-published` event, which marks the type of the current track the remote user publishes. It can be `'video'` or `'audio'`. If the remote user publishes an audio track and a video track at the same time, the SDK triggers two `user-published` events, in which `mediaType` is `'audio'` and `'video'` respectively.
 
-- In the {data.VSDK} v{data.VSDK_RELEASE}, `subscribe` returns a `Promise` object representing the eventual completion or failure of the asynchronous operation. When calling `subscribe`, pass a `remoteUser` object. For details, see {data.API_REF_WEB}/interfaces/iagorartcremoteuser.html<Link>AgoraRTCRemoteUser</Link>.
+- In the {data.VSDK} v{data.VSDK_RELEASE}, `subscribe` returns a `Promise` object representing the eventual completion or failure of the asynchronous operation. When calling `subscribe`, pass a `remoteUser` object. For details, see <Link to={`${data.API_REF_WEB}/interfaces/iagorartcremoteuser.html`}>AgoraRTCRemoteUser</Link>.
 - When the subscription succeeds, the subscribed tracks are updated to `remoteUser` and you can go on to call `play`.
 
 ## What's changed
@@ -169,7 +169,7 @@ For asynchronous methods such as joining and leaving a channel, publishing and s
 
 ### Fine control over audio and video tracks
 
-For the {data.VSDK} v{data.VSDK_RELEASE}, we replace the {data.API_REF_WEB}/interfaces/agorartc.stream.html<Link>Stream</Link> object with `Track` objects. You create, publish, or subscribe to one or multiple audio and video tracks. Tracks make up a stream. The advantage of dividing a stream up into tracks is that audio and video are controllable separately. And these new methods are easier to use than the `Stream.addTrack` and `Stream.removeTrack` methods in the {data.VSDK}.
+For the {data.VSDK} v{data.VSDK_RELEASE}, we replace the <Link to={`${data.API_REF_WEB}/interfaces/agorartc.stream.html`}>Stream</Link> object with `Track` objects. You create, publish, or subscribe to one or multiple audio and video tracks. Tracks make up a stream. The advantage of dividing a stream up into tracks is that audio and video are controllable separately. And these new methods are easier to use than the `Stream.addTrack` and `Stream.removeTrack` methods in the {data.VSDK}.
 
 For now, the {data.VSDK} v{data.VSDK_RELEASE} allows publishing multiple audio tracks but only one video track. The SDK automatically mixes multiple audio tracks into one when publishing.
 
@@ -234,36 +234,16 @@ The improved events are:
 ### `AgoraRTC`
 
 - Rename `getScreenSources` as <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#getelectronscreensources`}>getElectronScreenSources</Link>, remove callbacks, and return a promise
-
 - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#getdevices`}>getDevices</Link> returns a promise.
-  Add <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#getcameras`}>getCameras</Link> and <Link
-    to={`${data.API_REF_WEB}/interfaces/iagorartc.html#getmicrophones}`}
-  >
-    getMicrophones
-  </Link>
-
+  Add <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#getcameras`}>getCameras</Link> and <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#getmicrophones`}>getMicrophones</Link>
 - Remove the `Logger` object, and add <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#disablelogupload}`}>disableLogUpload</Link>, <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#enablelogupload}`}>enableLogUpload</Link>, and <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#setloglevel`}>setLogLevel</Link>
-
 - Replace `createStream` with the following methods:
-
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createmicrophoneaudiotrack`}>
-    createMicrophoneAudioTrack
-  </Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createcameravideotrack`}>
-    createCameraVideoTrack
-  </Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createscreenvideotrack`}>
-    createScreenVideoTrack
-  </Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createbuffersourceaudiotrack`}>
-    createBufferSourceAudioTrack
-  </Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createcustomaudiotrack`}>
-    createCustomAudioTrack
-  </Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createcustomvideotrack`}>
-    createCustomVideoTrack
-  </Link>
+  - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createmicrophoneaudiotrack`}>createMicrophoneAudioTrack</Link>
+  - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createcameravideotrack`}>createCameraVideoTrack</Link>
+  - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createscreenvideotrack`}>createScreenVideoTrack</Link>
+  - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createbuffersourceaudiotrack`}>createBufferSourceAudioTrack</Link>
+  - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createcustomaudiotrack`}>createCustomAudioTrack</Link>
+  - <Link to={`${data.API_REF_WEB}/interfaces/iagorartc.html#createcustomvideotrack`}>createCustomVideoTrack</Link>
 
 ### `Client`
 
@@ -272,16 +252,14 @@ The improved events are:
 - Add `RECONNECTING` in <Link to={`${data.API_REF_WEB}/globals.html#connectionstate`}>ConnectionState</Link>
 - Add <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#uid`}>Client.uid</Link>
 - Add <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#remoteusers`}>Client.remoteUsers</Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#addinjectstreamurl`}>
-    Client.addInjectStreamUrl
-  </Link> returns a promise representing the success or failure of injecting the stream.Remove `Client.on("streamInjectStatus")`.
+- <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#addinjectstreamurl`}>Client.addInjectStreamUrl</Link> returns a promise representing the success or failure of injecting the stream.Remove `Client.on("streamInjectStatus")`.
 - Remove the `url` parameter in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#addinjectstreamurl`}>Client.removeInjectStreamUrl</Link>
 - Remove the callbacks of <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#enabledualstream`}>Client.enableDualStream</Link> / <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#disabledualstream`}>Client.disableDualStream</Link> and return a promise
 - Move `Client.getCameras`, `Client.getDevices`, `Client.getRecordingDevices` to the `AgoraRTC` interface
 - Remove `Client.getPlayoutDevices`
 - Replace `Client.getLocalAudioStats`, `Client.getLocalVideoStats`, `Client.getRemoteAudioStats`, and `Client.getRemoteVideoStats` with <Link to={`${data.API_REF_WEB}/interfaces/ilocalaudiotrack.html#getstats`}>LocalAudioTrack.getStats</Link>, <Link to={`${data.API_REF_WEB}/interfaces/ilocalvideotrack.html#getstats`}>LocalVideoTrack.getStats</Link>, <Link to={`${data.API_REF_WEB}/interfaces/iremoteaudiotrack.html#getstats`}>RemoteAudioTrack.getStats</Link>, and <Link to={`${data.API_REF_WEB}/interfaces/iremotevideotrack.html#getstats`}>RemoteVideoTrack.getStats</Link>.
 - Remove `Client.getSystemStats`
-- Replace `Client.getSessionStats` and `Client.getTransportStats` with <Link to={`${{data.API_REF_WEB}/interfaces/iagorartcclient.html#getrtcstats}`}>Client.getRTCStats</Link>
+- Replace `Client.getSessionStats` and `Client.getTransportStats` with <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#getrtcstats}`}>Client.getRTCStats</Link>
 - Remove the callback in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#join`}>Client.join</Link> and return a promise. Also add the `appid` parameter in this method
 - Remove the callback in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#leave`}>Client.leave</Link> and return a promise.
 - Add <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#once`}>Client.once</Link>
@@ -291,27 +269,14 @@ The improved events are:
   a promise.
 - Add the `user` parameter in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#subscribe`}>Client.subscribe</Link> for passing l<Link to={`${data.API_REF_WEB}/interfaces/iagorartcremoteuser.htm`}>AgoraRTCRemoteUser</Link>，This method returns a promise. Remove `Client.on('stream-subscribed')`.
 - Add the `user` parameter in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#unsubscribe`}>Client.unsubscribe</Link> for passing <Link to={`${data.API_REF_WEB}/interfaces/iagorartcremoteuser.html`}>AgoraRTCRemoteUser</Link>. This method returns a promise.
-- <Link to={`#{data.API_REF_WEB}/interfaces/iagorartcclient.html#renewtoken`}>
-    Client.renewToken
-  </Link> returns a promise.
+- <Link to={`#{data.API_REF_WEB}/interfaces/iagorartcclient.html#renewtoken`}>Client.renewToken</Link> returns a promise.
 - Remove the callback in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#setclientrole`}>Client.setClientRole</Link> and return a promise. In the {data.VSDK} v{data.VSDK_RELEASE}, setting the user role as `audience`does not unpublish, and when calling`publish`, the SDK does not automatically setting the user role as `host`
 - Replace `Client.setEncryptionMode` and `Client.setEncryptionSecret` with <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#setencryptionconfig`}>Client.setEncryptionConfig</Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#setlivetranscoding`}>
-    Client.setLiveTranscoding
-  </Link>
-  , <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#startlivestreaming`}>
-    Client.startLiveStreaming
-  </Link>
-  , and <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#stoplivestreaming`}>
-    Client.stopLiveStreaming
-  </Link> all return a promise. Remove `Client.on('liveTranscodingUpdated')`, `Client.on('liveStreamingStarted')`,
-  `Client.on('liveStreamingFailed')`, and `Client.on('liveStreamingStopped')` events.
+- <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#setlivetranscoding`}>Client.setLiveTranscoding</Link>,<Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#startlivestreaming`}>Client.startLiveStreaming</Link>, and <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#stoplivestreaming`}>Client.stopLiveStreaming</Link> all return a promise. Remove `Client.on('liveTranscodingUpdated')`, `Client.on('liveStreamingStarted')`, `Client.on('liveStreamingFailed')`, and `Client.on('liveStreamingStopped')` events.
 - `Client.startChannelMediaRelay` return a promise
 - Replace `setDestChannelInfo` in <Link to={`${data.API_REF_WEB}/interfaces/ichannelmediarelayconfiguration.html`}>ChannelMediaRelayConfiguration</Link> with <Link to={`${data.API_REF_WEB}/interfaces/ichannelmediarelayconfiguration.html#adddestchannelinfo`}>addDestChannelInfo</Link>, remove several parameters
 - Remove several parameters in <Link to={`${data.API_REF_WEB}/interfaces/ichannelmediarelayconfiguration.html#setsrcchannelinfo`}>setSrcChannelInfo</Link> of <Link to={`${data.API_REF_WEB}/interfaces/ichannelmediarelayconfiguration.html`}>ChannelMediaRelayConfiguration</Link>
-- <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#stopchannelmediarelay`}>
-    Client.stopChannelMediaRelay
-  </Link> return a promise.
+- <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#stopchannelmediarelay`}>Client.stopChannelMediaRelay</Link> return a promise.
 - Remove the callback in <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#updatechannelmediarelay`}>Client.updateChannelMediaRelay</Link> and this method returns a promise.
 - Replace `Client.on('first-video-frame-decode')` and `Client.on('first-audio-frame-decode')` with <Link to={`${data.API_REF_WEB}/interfaces/iremotetrack.html#event_first_frame_decoded`}>RemoteTrack.on("first-frame-decode")</Link>
 - Replace `Client.on('mute-audio')`, `Client.on('mute-video')`, `Client.on('unmute-audio')`, and `Client.on('unmute-video')` with <Link to={`${data.API_REF_WEB}/interfaces/iagorartcclient.html#event_user_mute_updated`}>Client.on("user-mute-updated")</Link>
@@ -323,7 +288,7 @@ The improved events are:
 
 > Remove `Stream.setAudioOutput`. Agora does not recommends setting the audio output device on the web page. Instead, Agora recommends using the default audio output device.
 
-### Stream
+### `Stream`
 
 In the {data.VSDK} v{data.VSDK_RELEASE}, Agora replaces the <Link to={`${data.API_REF_WEB}/interfaces/agorartc.stream.html`}>Stream</Link> object with `Track` objects. Tracks make up a stream. You create, publish, or subscribe to one or multiple audio and video tracks to control the media stream. The advantage of dividing a stream up into tracks is that audio and video are controllable separately. Additionally, the {data.VSDK} v{data.VSDK_RELEASE} provides different interfaces for the local and remote tracks. Some methods and objects are only available locally, and some are only available remotely.
 
