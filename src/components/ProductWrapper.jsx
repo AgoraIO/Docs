@@ -1,7 +1,7 @@
 import { useLocation } from '@docusaurus/router';
 import React, { useEffect, useState } from 'react';
 
-export const ProductWrapper = ({ product, children }) => {
+export const ProductWrapper = ({ notAllowed, product, children }) => {
   const [currentProduct, setCurrentProduct] = useState();
 
   const { pathname } = useLocation();
@@ -12,6 +12,7 @@ export const ProductWrapper = ({ product, children }) => {
   }, [pathname]);
 
   if (currentProduct !== product) return null;
+  if (currentProduct === notAllowed) return null;
 
-  return <>{children}</>;
+  return children;
 };

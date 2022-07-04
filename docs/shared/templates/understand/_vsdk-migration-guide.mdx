@@ -1,9 +1,21 @@
-import * as data from '@site/data/variables';
+import Web from '@docs/shared/partials/vsdk-migration-guide/_web.mdx';
+import Android from '@docs/shared/partials/vsdk-migration-guide/_android.mdx';
+import Ios from '@docs/shared/partials/vsdk-migration-guide/_ios.mdx';
 
-import MigrationPlatformGuide from '@docs/shared/partials/vsdk-migration-guide/_index.mdx';
+import * as data from '@site/data/variables';
 
 {props.PRODUCT} {data.VSDK_RELEASE} supplies a new {data.VSDK} that you use to embed real-time video and audio into your app. It supports large-scale real-time interactive activities and provides better real-time interactive effects. For details, see the <Link to={`/${props.PATH}/understand/product-overview`}>Product overview</Link>
 
 This page introduces the main steps to upgrade the SDK from v{data.VSDK_PREVIOUS_RELEASE} to {data.VSDK_RELEASE}, as well as the related changes.
 
-<MigrationPlatformGuide />
+<PlatformWrapper platform="web">
+  <Web />
+</PlatformWrapper>
+
+<PlatformWrapper platform="android">
+  <Android />
+</PlatformWrapper>
+
+<PlatformWrapper platform="ios">
+  <Ios />
+</PlatformWrapper>
