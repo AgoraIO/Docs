@@ -6,7 +6,8 @@ description: >
   A guide to understanding error codes and warning codes returned by Agora Engine.
 ---
 
-:rootdir: ../..
-include::{rootdir}/shared/.variables.adoc[]
-include::{rootdir}/video-calling/.local_variables.adoc[]
-include::{rootdir}/shared/.error-message-guide.adoc[]
+import ErrorMessage from '@docs/shared/templates/reference/_error-message-guide.mdx';
+
+export const toc = [{}];
+
+<ErrorMessage product="Video Calling" PATH="video-calling" />
