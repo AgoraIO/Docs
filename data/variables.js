@@ -10,6 +10,11 @@ export const ENGINE = `${COMPANY} Engine`;
 export const RTE = 'Real-Time Engagement';
 export const RTEC = `${RTE} Core`;
 export const RTES = `${RTE} SDK`;
+export const APP_ID_LINK = `http://agora.io`;
+export const AGORA_CONSOLE_URL = `http://console.agora.io`;
+export const API_REF_ANDROID = `http://api.agora.io/android`;
+
+export const PLATFORM = 'dummy';
 
 export const VIDEO = 'Video Calling';
 export const AUDIO = 'Voice Calling';
