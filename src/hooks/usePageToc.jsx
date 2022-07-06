@@ -22,8 +22,6 @@ export const usePageToc = () => {
 
     setToc(toc);
   }, [pathname, platform]);
-  console.log(toc);
 
-  console.log(pathname);
   return toc;
 };

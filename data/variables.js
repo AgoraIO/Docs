@@ -10,6 +10,11 @@ export const ENGINE = `${COMPANY} Engine`;
 export const RTE = 'Real-Time Engagement';
 export const RTEC = `${RTE} Core`;
 export const RTES = `${RTE} SDK`;
+export const APP_ID_LINK = `http://agora.io`;
+export const AGORA_CONSOLE_URL = `http://console.agora.io`;
+export const API_REF_ANDROID = `http://api.agora.io/android`;
+
+export const PLATFORM = 'dummy';
 
 export const VIDEO = 'Video Calling';
 export const AUDIO = 'Voice Calling';
@@ -81,6 +86,7 @@ export const DOWNLOAD_URL = 'https://download.agora.io/sdk/release';
 export const AGORA_PLATFORM_FOLDER = 'Agora%20Platform';
 
 export const API_REF_FOLDER = 'API%20Reference';
+export const API_REF_WEB = 'https://api.agora.io/web';
 
 export const APP_LINK = `${AGORA_DOCS_URL}/${AGORA_PLATFORM_FOLDER}/get_appid_token#get-the-app-id[App ID]`;
 

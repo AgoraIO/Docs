@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { platforms } from '@site/data/platforms';
 import { useLocalStorage } from '@app/hooks/useLocalStorage';
 import { usePageToc } from '@app/hooks/usePageToc';

@@ -10,7 +10,6 @@ const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
 
 export default function TOC({ className, ...props }) {
   const toc = usePageToc();
-  console.log(toc);
 
   return (
     <div className={clsx(styles.tableOfContents, 'thin-scrollbar', className)}>
