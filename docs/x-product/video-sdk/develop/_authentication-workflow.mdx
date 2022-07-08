@@ -1,8 +1,8 @@
 import * as data from '@site/data/variables';
-import ProjectSetup from '@docs/shared/partials/authentication-workflow-uikit/project-setup/index.mdx';
-import ProjectImplement from '@docs/shared/partials/authentication-workflow-uikit/project-implementation/index.mdx';
-import ProjectTest from '@docs/shared/partials/authentication-workflow-uikit/project-test/index.mdx';
-import Reference from '@docs/shared/partials/authentication-workflow-uikit/reference/index.mdx';
+import ProjectSetup from '@docs/x-product/partials/authentication-workflow/project-setup/index.mdx';
+import ProjectImplement from '@docs/x-product/partials/authentication-workflow/project-implementation/index.mdx';
+import ProjectTest from '@docs/x-product/partials/authentication-workflow/project-test/index.mdx';
+import Reference from '@docs/x-product/partials/authentication-workflow/reference/index.mdx';
 
 Authentication is the act of validating the identity of each user before they access a system. {data.COMPANY} uses digital tokens to authenticate users and their privileges before they access {data.AGORA_BACKEND} to join {props.PRODUCT}. Each token is valid for a limited period and works only for a specific channel. For example, you cannot use the token generated for a channel called `AgoraChannel` to join the `AppTest` channel.
 
@@ -38,7 +38,7 @@ To follow this procedure you must have:
 
 In order to create the environment necessary to integrate token authentication into your app, do the following:
 
-- Open the [Get started](/get-started)project you created.
+- Open the [Get started](/understand/get-started)project you created.
 - Log in to your [Heroku](https://www.heroku.com/)account.
 
 <ProjectSetup />
@@ -113,6 +113,7 @@ To ensure that you have implemented {data.COMPANY} token authentication workflow
   Users communicate securely using channels in the same project. The _App ID_ you use to generate this token must be the same one you supplied to Heroku.
 
 2. In your browser, navigate to the {data.DEMO_PAGE_LINK} and update _App ID_, _Channel_, and _Token_ with the values for your temporary token, then click *Join*.
+
 <ProjectTest />
 
 Your {data.PLATFORM} {props.CLIENT} magically connects to the same channel you used in {data.DEMO_PAGE_LINK}. You don't have to hardcode a token in your app; each channel is secured with a specific token, and each token is refreshed automatically. That's pretty Cool!
