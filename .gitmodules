@@ -1,0 +1,4 @@
+[submodule "docs"]
+	path = docs
+	url = https://github.com/AgoraIO/Docs-Source
+	branch = main
