@@ -1,39 +1,44 @@
-# Website
+<div align="center">
+  <img width="200" src="https://www.agora.io/en/wp-content/themes/agora-mar-24-2022-b/images/agora-logo.svg" alt="Agora Brand Logo">
+  <h1>Agora Documentation Website</h1>
+</div>
 
-### Installation
+Agora DoAgora documentation website uses Hugo and Docsy (theme built for Hugo) to generate the static documentation website. It also uses Nodejs as the CLI to automate development build process. The static website containing Agora documentation from external Asciidoc and Markdown source files.
 
-```
-$ yarn
-```
+## Prerequisites
 
-### Local Development
+In order to build the Agora documentation using this repo you must have to have installed [Nodejs](https://nodejs.org/en/download/) >= `15.1.0` on your system.
 
-```
-$ yarn start
-```
+## Run the Website
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- Clone the repository using your terminal:
 
-### Build
-
-```
-$ yarn build
+```bash
+  git clone https://github.com/AgoraIO/Docs.git
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+- In Terminal, navigate to the root folder of this repository.Initiate the submodules:
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+cd Docs
+git submodule init
+git submodule update
 ```
 
-Not using SSH:
+- **Installation:**
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+```bash
+yarn
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- **Local Development:**
+
+```bash
+yarn start
+```
+
+- **Build:**
+
+```bash
+yarn build
+```

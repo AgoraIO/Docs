@@ -82,6 +82,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'beta',
+        content: 'This site is currently under development.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true
+      },
       algolia: {
         appId: 'YOUR_APP_ID',
         apiKey: 'YOUR_SEARCH_API_KEY',
