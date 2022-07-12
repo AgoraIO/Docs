@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import queryString from 'query-string';
-import styles from '@app/components/PlatformWrapper.module.scss';
 import { AppContext } from '@app/contexts/AppContext';
 import { useHistory, useLocation } from '@docusaurus/router';
 
@@ -22,9 +21,5 @@ export const PlatformWrapper = ({ platform, children, ...props }) => {
     history.push(path);
   }, [pathname, selectedPlatform]);
 
-  return (
-    <div className={styles.platformWrapper} {...props}>
-      {platform === selectedPlatform ? children : null}
-    </div>
-  );
+  return <div {...props}>{platform === selectedPlatform ? children : null}</div>;
 };

@@ -1,14 +1,14 @@
-import React from 'react';
 import MDXComponents from '@theme-original/MDXComponents';
-import { PlatformWrapper } from '@app/components/PlatformWrapper';
-import { ProductWrapper } from '@app/components/ProductWrapper';
-
-import Link from '@docusaurus/Link';
+import { PlatformWrapper } from '@app/mdx-components/PlatformWrapper';
+import { ProductWrapper } from '@app/mdx-components/ProductWrapper';
+import { Vl, Vg } from '@app/mdx-components/Variables';
+import { DocLink } from '@app/mdx-components/Link';
 
 export default {
   ...MDXComponents,
   PlatformWrapper,
   ProductWrapper,
-  DocPage: ({ children, ...props }) => <React.Fragment {...props}>{children}</React.Fragment>,  
-  Link
+  Vl,
+  Vg,
+  Link: DocLink
 };

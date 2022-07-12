@@ -3,11 +3,11 @@
   <h1>Agora Documentation Website</h1>
 </div>
 
-Agora documentation website uses Hugo and Docsy (theme built for Hugo) to generate the static documentation website. It also uses Nodejs as the CLI to automate development build process. The static website containing Agora documentation from external Asciidoc and Markdown source files.
+Agora documentation website uses [Docusaurus](https://docusaurus.io/) to generate the static documentation website. It also uses MDX and React as the frontend framework. The actual contents of the website (in MDX) lives in a git submodule [repository](https://github.com/AgoraIO/Docs-Source).
 
 ## Prerequisites
 
-In order to build the Agora documentation using this repo you must have to have installed [Nodejs](https://nodejs.org/en/download/) >= `15.1.0` on your system.
+In order to build the Agora documentation using this repo you must have to have installed [Nodejs](https://nodejs.org/en/download/) >= `16.8.0` on your system.
 
 ## Run the Website
 
@@ -21,8 +21,9 @@ In order to build the Agora documentation using this repo you must have to have 
 
 ```bash
 cd Docs
-git submodule init
-git submodule update
+git submodule sync --recursive
+git submodule update --init --remote --recursive
+git pull --recurse-submodules
 ```
 
 - **Installation**
