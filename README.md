@@ -3,7 +3,7 @@
   <h1>Agora Documentation Website</h1>
 </div>
 
-Agora DoAgora documentation website uses Hugo and Docsy (theme built for Hugo) to generate the static documentation website. It also uses Nodejs as the CLI to automate development build process. The static website containing Agora documentation from external Asciidoc and Markdown source files.
+Agora documentation website uses Hugo and Docsy (theme built for Hugo) to generate the static documentation website. It also uses Nodejs as the CLI to automate development build process. The static website containing Agora documentation from external Asciidoc and Markdown source files.
 
 ## Prerequisites
 
@@ -25,19 +25,19 @@ git submodule init
 git submodule update
 ```
 
-- **Installation:**
+- **Installation**
 
 ```bash
 yarn
 ```
 
-- **Local Development:**
+- **Local Development**
 
 ```bash
 yarn start
 ```
 
-- **Build:**
+- **Build**
 
 ```bash
 yarn build
