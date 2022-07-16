@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import Head from '@docusaurus/Head';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -34,6 +35,9 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
+      <Head>
+        <meta name="referrer" content="no-referrer" />
+      </Head>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

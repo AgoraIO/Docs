@@ -1,20 +1,14 @@
 import React, { useEffect } from 'react';
-import queryString from 'query-string';
 import { AppContext } from '@app/contexts/AppContext';
 import { useHistory, useLocation } from '@docusaurus/router';
 
 // TODO: Update Route Based Platform Selectors
 
 export const PlatformWrapper = ({ platform, children, ...props }) => {
-  const { platform: selectedPlatform, handlePlatformChange } = React.useContext(AppContext);
+  const { platform: selectedPlatform } = React.useContext(AppContext);
 
-  const { pathname, search } = useLocation();
+  const { pathname } = useLocation();
   const history = useHistory();
-
-  useEffect(() => {
-    const { platform } = queryString.parse(location);
-    if (platform) handlePlatformChange(platform);
-  }, []);
 
   useEffect(() => {
     const path = `${pathname}?platform=${selectedPlatform}`;

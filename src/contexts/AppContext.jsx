@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import queryString from 'query-string';
+import { useLocation } from '@docusaurus/router';
 import { platforms } from '@site/data/platforms';
 import { useLocalStorage } from '@app/hooks/useLocalStorage';
-import { usePageToc } from '@app/hooks/usePageToc';
 
 export const AppContext = React.createContext({});
 
@@ -9,6 +10,13 @@ export const AppProvider = ({ children }) => {
   const [platform, setPlatform] = useLocalStorage('platform', platforms[0].value);
 
   const handlePlatformChange = platform => setPlatform(platform);
+
+  const { search } = useLocation();
+
+  useEffect(() => {
+    const { platform } = queryString.parse(search);
+    if (platform) handlePlatformChange(platform);
+  }, []);
 
   const contextValue = { platform, handlePlatformChange };
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import * as globals from '@docs/shared/variables/global';
-import local from '@docs/shared/variables/local';
 import { useLocation } from '@docusaurus/router';
+
+import * as globals from '@docs/shared/variables/global';
+import products from '@docs/shared/variables/product';
+import platforms from '@docs/shared/variables/platform';
 
 export const DocLink = ({ to, children, ...props }) => {
   let link = to;
@@ -15,8 +17,10 @@ export const DocLink = ({ to, children, ...props }) => {
     values.map(value => {
       let scope = value.split('.')[0];
       let hash = value.split('.')[1];
-      if (scope === 'local') {
-        link = link.replace(`{{${value}}}`, local[product]?.[hash]);
+      if (scope === 'product') {
+        link = link.replace(`{{${value}}}`, products[product]?.[hash]);
+      } else if (scope === 'platform') {
+        link = link.replace(`{{${value}}}`, platforms[product]?.[hash]);
       } else {
         link = link.replace(`{{${value}}}`, globals[hash]);
       }
