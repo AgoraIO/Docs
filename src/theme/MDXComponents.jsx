@@ -1,7 +1,7 @@
 import MDXComponents from '@theme-original/MDXComponents';
 import { PlatformWrapper } from '@app/mdx-components/PlatformWrapper';
 import { ProductWrapper } from '@app/mdx-components/ProductWrapper';
-import { Vg, Vp, Vpl } from '@app/mdx-components/Variables';
+import { Vg, Vpd, Vpl } from '@app/mdx-components/Variables';
 import { DocLink } from '@app/mdx-components/Link';
 
 export default {
@@ -9,7 +9,7 @@ export default {
   PlatformWrapper,
   ProductWrapper,
   Vg,
-  Vp,
+  Vpd,
   Vpl,
   Link: DocLink
 };

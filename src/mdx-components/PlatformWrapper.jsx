@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { AppContext } from '@app/contexts/AppContext';
 import { useHistory, useLocation } from '@docusaurus/router';
 
-// TODO: Update Route Based Platform Selectors
-
 export const PlatformWrapper = ({ platform, children, ...props }) => {
   const { platform: selectedPlatform } = React.useContext(AppContext);
 

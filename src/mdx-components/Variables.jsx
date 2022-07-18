@@ -17,7 +17,7 @@ export const Vg = ({ k }) => {
   return <>{globals[k]}</>;
 };
 
-export const Vp = ({ k }) => {
+export const Vpd = ({ k }) => {
   const { pathname } = useLocation();
   const product = pathname.split('/')[1];
 

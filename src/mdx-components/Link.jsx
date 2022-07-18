@@ -2,16 +2,19 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
 
+import { AppContext } from '@app/contexts/AppContext';
+
 import * as globals from '@docs/shared/variables/global';
 import products from '@docs/shared/variables/product';
 import platforms from '@docs/shared/variables/platform';
 
 export const DocLink = ({ to, children, ...props }) => {
+  const { pathname } = useLocation();
+  const { platform } = React.useContext(AppContext);
+  const product = pathname.split('/')[1];
+
   let link = to;
   let values = getFromBetween.get(to, '{{', '}}');
-
-  const { pathname } = useLocation();
-  const product = pathname.split('/')[1];
 
   if (values.length) {
     values.map(value => {
@@ -20,11 +23,10 @@ export const DocLink = ({ to, children, ...props }) => {
       if (scope === 'product') {
         link = link.replace(`{{${value}}}`, products[product]?.[hash]);
       } else if (scope === 'platform') {
-        link = link.replace(`{{${value}}}`, platforms[product]?.[hash]);
+        link = link.replace(`{{${value}}}`, platforms[platform]?.[hash]);
       } else {
         link = link.replace(`{{${value}}}`, globals[hash]);
       }
-      console.log(link);
     });
   }
 
