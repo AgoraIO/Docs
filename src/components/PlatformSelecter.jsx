@@ -4,21 +4,14 @@ import clsx from 'clsx';
 import { platforms } from '@site/data/platforms';
 import { AppContext } from '@app/contexts/AppContext';
 
-import styles from '@app/components/PlatformSelecter.module.scss';
-import useFrontMatter from '@theme/useFrontMatter';
-
 export const PlatformSelecter = () => {
   const { platform, handlePlatformChange } = React.useContext(AppContext);
 
-  const { template } = useFrontMatter();
-
-  // if (template !== 'platform') return null;
-
   return (
-    <div className={styles.platformSelecter}>
+    <div className="platformSelecter">
       {platforms.map(({ label, value }) => (
         <button
-          className={clsx(styles.platformSelecterButton, platform === value && styles.active)}
+          className={clsx('platformSelecterButton', platform === value ? 'active' : '')}
           label={label}
           onClick={() => handlePlatformChange(value)}
           key={value}
